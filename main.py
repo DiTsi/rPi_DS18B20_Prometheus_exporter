@@ -1,7 +1,11 @@
+#!/usr/bin/env python3
+
 from prometheus_client import start_http_server, Gauge
 import os
 import glob
 import time
+
+
 temperature = Gauge('temperature', 'Temperature in Celsius')
 
 os.system('modprobe w1-gpio')
